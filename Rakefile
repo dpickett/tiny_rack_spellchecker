@@ -5,7 +5,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "tiny_rack_spellchecker"
-    gem.summary = %Q{TODO}
+    gem.summary = %Q{A Rack Application that processes tinyMCE spell check requests}
     gem.email = "dpickett@enlightsolutions.com"
     gem.homepage = "http://github.com/dpickett/tiny_rack_spellchecker"
     gem.authors = ["Dan Pickett"]

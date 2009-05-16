@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{tiny_rack_spellchecker}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dan Pickett"]
-  s.date = %q{2009-05-15}
+  s.date = %q{2009-05-16}
   s.email = %q{dpickett@enlightsolutions.com}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -28,14 +28,15 @@ Gem::Specification.new do |s|
      "lib/tiny_rack_spellchecker/rack_application.rb",
      "lib/tiny_rack_spellchecker/request_controller.rb",
      "test/test_helper.rb",
-     "test/tiny_rack_spellchecker_test.rb"
+     "test/tiny_rack_spellchecker_test.rb",
+     "tiny_rack_spellchecker.gemspec"
   ]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/dpickett/tiny_rack_spellchecker}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.2}
-  s.summary = %q{TODO}
+  s.summary = %q{A Rack Application that processes tinyMCE spell check requests}
   s.test_files = [
     "test/test_helper.rb",
      "test/tiny_rack_spellchecker_test.rb"
