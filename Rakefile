@@ -24,6 +24,18 @@ Rake::TestTask.new(:test) do |test|
 end
 
 begin
+  require 'cucumber'
+  require 'cucumber/rake/task'
+
+  Cucumber::Rake::Task.new(:features) do |t|
+    t.cucumber_opts = "features --format pretty" # Any valid command line option can go here.
+  end
+
+rescue LoadError
+  puts "Cucumber not installed. You will not be able to run features"
+end
+
+begin
   require 'rcov/rcovtask'
   Rcov::RcovTask.new do |test|
     test.libs << 'test'
