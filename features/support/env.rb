@@ -5,9 +5,11 @@ require "rack/test"
 
 module TinyRackSpellchecker
   module WorldOfCucumber
-    def self.included(base)
-      base.extend(Test::Unit::Assertions)
+    def app
+      TinyRackSpellchecker::RackApplication.new
     end
+    
+    include Test::Unit::Assertions
     include Rack::Test::Methods
   end
 end

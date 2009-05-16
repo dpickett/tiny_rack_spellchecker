@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class TinyRackSpellcheckerTest < Test::Unit::TestCase
-  should "probably rename this file and start testing for real" do
-    flunk "hey buddy, you should probably rename this file and start testing for real"
+  should "run cucumber features" do
+    flunk "all the good stuff is in the cucumber features - it's a rack app!"
   end
 end

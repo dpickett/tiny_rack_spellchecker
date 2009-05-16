@@ -15,7 +15,7 @@ Then /^I should get a response$/ do
 end
 
 Then /^there should be (\d*) errors?$/ do |error_count|
-  json_hash = JSON.parse(response.body) 
+  json_hash = JSON.parse(last_response.body) 
   assert_equal error_count.to_i, json_hash["result"].size
 end
 

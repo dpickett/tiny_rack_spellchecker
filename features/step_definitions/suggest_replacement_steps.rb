@@ -8,7 +8,7 @@ end
 When /^I request possible replacements$/ do
   @params["method"] = "getSuggestions"
   post "/spell_checker", @params.to_json
-  @json_hash = JSON.parse(response.body)
+  @json_hash = JSON.parse(last_response.body)
   @result = @json_hash["result"]
 end
 

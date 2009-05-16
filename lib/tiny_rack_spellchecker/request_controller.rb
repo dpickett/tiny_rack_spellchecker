@@ -1,5 +1,5 @@
-module MetallicSpellChecker
-  class RequestProcessor
+module TinyRackSpellchecker
+  class RequestController
     class << self
       def handle(req)
         if req["method"] == "getSuggestions"
@@ -9,7 +9,7 @@ module MetallicSpellChecker
         end
       end
 
-      def self.check(content)
+      def check(content)
         speller = Aspell.new("en_US")
         bad_words = []
         content.each do |word| 
@@ -25,7 +25,7 @@ module MetallicSpellChecker
         }
       end
 
-      def self.suggest_alternatives_for(word, position_id)
+      def suggest_alternatives_for(word, position_id)
         speller = Aspell.new("en_US")
         {
           "id"     => position_id,
