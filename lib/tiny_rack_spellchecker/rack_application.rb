@@ -1,5 +1,10 @@
 module TinyRackSpellchecker
   class RackApplication
+    def initialize(app, message = "")
+      @app = app
+      @message = message
+    end
+    
     def call(env)
       if env["PATH_INFO"] =~ /^\/spell_checker/
         req = JSON.parse(env["rack.input"].read)
