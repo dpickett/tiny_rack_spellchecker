@@ -3,15 +3,15 @@
 A Rack Application that processes tinyMCE spell check requests
 
 Point tinyMCE to this application like so:
-<pre>
-tinyMCE.init({
-  "plugins" : "spellchecker",
-	"theme_advanced_buttons3_add" : "spellchecker",
-  "spellchecker_languages" : "+English=en",
-  "spellchecker_rpc_url" : "/spell_checker",
-  "theme_advanced_buttons1_add" : "spellchecker",
-  });
-</pre>
+
+  tinyMCE.init({
+    "plugins" : "spellchecker",
+    "theme_advanced_buttons3_add" : "spellchecker",
+    "spellchecker_languages" : "+English=en",
+    "spellchecker_rpc_url" : "/spell_checker",
+    "theme_advanced_buttons1_add" : "spellchecker",
+    });
+
 == Copyright
 
 Copyright (c) 2009 Dan Pickett. See LICENSE for details.
