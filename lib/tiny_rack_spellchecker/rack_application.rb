@@ -1,6 +1,6 @@
 module TinyRackSpellchecker
   class RackApplication
-    def initialize(app, message = "")
+    def initialize(app = nil, message = "")
       @app = app
       @message = message
     end
@@ -11,7 +11,7 @@ module TinyRackSpellchecker
         results = RequestController.handle(req) 
         [200, {"Content-Type" => "text/javascript"}, [results.to_json]]
       else
-        [404, {"Content-Type" => "text/html"}, ["Not Found"]]
+        @app.call(env) unless app.nil?
       end
     end
   end
